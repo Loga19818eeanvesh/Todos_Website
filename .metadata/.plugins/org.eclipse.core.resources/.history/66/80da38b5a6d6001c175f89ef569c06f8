@@ -1,0 +1,13 @@
+<html>
+
+<head>
+<title>Todo's of ${name}</title>
+</head>
+
+<body>
+<h1>Here are the list of your Todo's</h1><br>
+${todos}<br>
+<a href="add-todo">Add a Todo</a>
+</body>
+
+</html>

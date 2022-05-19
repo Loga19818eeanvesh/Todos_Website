@@ -1,0 +1,13 @@
+<html>
+
+<head>
+<title>First Web Application</title>
+</head>
+
+<body>
+<h1>Here are the list of your Todo's</h1><br>
+${todos}<br>
+<h2>Your name is ${name}</h2>
+</body>
+
+</html>

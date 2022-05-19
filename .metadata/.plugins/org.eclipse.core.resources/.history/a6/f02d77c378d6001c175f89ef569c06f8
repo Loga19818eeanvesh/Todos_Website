@@ -1,0 +1,5 @@
+package start.springboot.web.springbootstartweb.service;
+
+public class TodoService {
+
+}

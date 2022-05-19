@@ -1,0 +1,15 @@
+<html>
+
+<head>
+<title>First Web Application</title>
+</head>
+
+<body>
+<form>
+<input type="text" id="name" name="name">
+<label for="name">Name:</label><br>
+<input type="submit" value="Submit">
+</form>
+</body>
+
+</html>

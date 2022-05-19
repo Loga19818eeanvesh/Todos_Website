@@ -1,0 +1,18 @@
+<html>
+
+<head>
+<title>First Web Application</title>
+</head>
+
+<body>
+<h1>Add Todo for ${name}</h1>
+
+<form method="post">
+<label for="desc">Name:</label>
+<input type="text" id="desc" name="description"><br>
+<input type="submit" value="Submit">
+</form>
+
+</body>
+
+</html>

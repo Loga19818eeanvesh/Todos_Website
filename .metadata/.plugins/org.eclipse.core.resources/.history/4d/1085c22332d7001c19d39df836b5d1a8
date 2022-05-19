@@ -1,0 +1,5 @@
+package start.springboot.web.springbootstartweb.security;
+
+public class SecurityConfiguration {
+
+}

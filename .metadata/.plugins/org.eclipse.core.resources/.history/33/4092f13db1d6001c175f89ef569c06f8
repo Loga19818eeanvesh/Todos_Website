@@ -1,0 +1,24 @@
+<html>
+
+<head>
+<title>Login Page</title>
+</head>
+
+<body>
+<div class="container">
+	<h1 style="color:red;">${errorMessage}</h1>
+	<form method="post">
+		<fieldset class="form-group">
+			<label for="name">Name:</label><br>
+			<input type="text" id="name" name="name"><br>
+		</fieldset>
+		<fieldset class="form-group">
+			<label for="password">Password:</label><br>
+			<input type="password" id="password" name="password"><br>
+		</fieldset>
+		<button type="submit" class="btn btn-success">Login</button>
+	</form>
+</div>
+</body>
+
+</html>

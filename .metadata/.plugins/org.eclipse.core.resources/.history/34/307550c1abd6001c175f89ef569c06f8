@@ -1,0 +1,26 @@
+<html>
+
+<head>
+<title>Add Todo</title>
+<link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css"
+	rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+<p>Add Todo for ${name}</p>
+
+<form method="post">
+<label for="desc">Name:</label>
+<input type="text" id="desc" name="description">
+<input type="submit" value="Submit">
+</form>
+
+</div>
+<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
+<script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

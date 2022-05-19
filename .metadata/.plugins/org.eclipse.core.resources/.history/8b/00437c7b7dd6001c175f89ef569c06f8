@@ -1,0 +1,11 @@
+package start.springboot.web.springbootstartweb.service;
+
+import org.springframework.stereotype.Component;
+
+@Service
+public class LoginService {
+
+	public boolean validateUser(String userid,String password) {
+		return userid.equalsIgnoreCase("usr1") && password.equalsIgnoreCase("pwd1");
+	}
+}

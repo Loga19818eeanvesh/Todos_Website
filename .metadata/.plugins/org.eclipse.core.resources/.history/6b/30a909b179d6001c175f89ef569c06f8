@@ -1,0 +1,12 @@
+<html>
+
+<head>
+<title>First Web Application</title>
+</head>
+
+<body>
+<h1>Welcome! ${name}. <a href="/list-todos">Click here to manage your Todo's</a></h1>
+
+</body>
+
+</html>
