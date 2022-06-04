@@ -11,16 +11,8 @@ import start.springboot.web.springbootstartweb.model.Todo;
 
 @Service
 public class TodoService {
-	private static List<Todo> todos = new ArrayList<Todo>();
+	/*private static List<Todo> todos = new ArrayList<Todo>();
     private static int todoCount = 3;
-
-    static {
-        todos.add(new Todo(1, "usr1", "Learn Spring MVC", new Date(),
-                false));
-        todos.add(new Todo(2, "usr1", "Learn Struts", new Date(), false));
-        todos.add(new Todo(3, "usr1", "Learn Hibernate", new Date(),
-                false));
-    }
 
     public List<Todo> retrieveTodos(String user) {
         List<Todo> filteredTodos = new ArrayList<Todo>();
@@ -59,5 +51,5 @@ public class TodoService {
                 iterator.remove();
             }
         }
-    }
+    }*/
 }
