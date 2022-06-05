@@ -21,7 +21,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import start.springboot.web.springbootstartweb.model.Todo;
+import start.springboot.web.springbootstartweb.model.User;
 import start.springboot.web.springbootstartweb.repository.TodosRepository;
+import start.springboot.web.springbootstartweb.repository.UserRepository;
 import start.springboot.web.springbootstartweb.service.TodoService;
 
 
@@ -30,6 +32,9 @@ import start.springboot.web.springbootstartweb.service.TodoService;
 public class TodoController {
 	@Autowired
 	private TodosRepository todosRepository;
+	
+	@Autowired
+	private UserRepository userRepository;
 	
 	@InitBinder
 	protected void initBinder(WebDataBinder binder) {
@@ -61,8 +66,23 @@ public class TodoController {
 		todosRepository.AddTodoToUser(name, todo);
 		return "redirect:/list-todos";
 	}
+	
+	@RequestMapping(value="/register",method=RequestMethod.GET)
+	public String showRegister(ModelMap model) {
+		model.addAttribute("user",new User("", "", "", true, "ROLE_USER"));
+		return "register";
+	}
 
-
+	@RequestMapping(value="/register",method=RequestMethod.POST)
+	public String register(ModelMap model,User user,BindingResult result) {
+		if (result.hasErrors()) {
+			return "register";
+		}
+		userRepository.save(user);
+		return "redirect:/";
+	}
+	
+	
 	private String getLoggedInUserName() {
 		Object principal = SecurityContextHolder.getContext()
 				.getAuthentication().getPrincipal();
@@ -87,11 +107,16 @@ public class TodoController {
 	}
 	
 	@RequestMapping(value="/update-todo",method=RequestMethod.POST)
-	public String updateTodo(ModelMap model,Todo todo,BindingResult result) {
+	public String updateTodo(ModelMap model,Todo todo,BindingResult result,@RequestParam int id) {
 		if (result.hasErrors()) {
 			return "add-todo";
 		}
+		String username=getLoggedInUserName();
+		User user = todosRepository.retriveUser(username);
+		todo.setUser(user);
 		todosRepository.updateTodo(todo);
+		
 		return "redirect:/list-todos";
 	}
+	
 }

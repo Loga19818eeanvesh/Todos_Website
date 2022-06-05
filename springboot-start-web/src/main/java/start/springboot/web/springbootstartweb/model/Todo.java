@@ -21,8 +21,12 @@ public class Todo {
     private String description;
 	@Column(nullable = false)
     private Date targetDate;
-	@Column(nullable = false)
-    private boolean isDone;
+	
+    public void setId(int id) {
+		this.id = id;
+	}
+
+	private boolean isDone;
     
     protected Todo() {
         super();
@@ -33,6 +37,13 @@ public class Todo {
 		this.description = description;
 		this.targetDate = targetDate;
 		this.isDone = isDone;
+	}
+	
+	public Todo(String description, Date targetDate) {
+		super();
+		this.description = description;
+		this.targetDate = targetDate;
+		this.isDone = false;
 	}
 
 	public Todo(User user, String desc, Date targetDate, boolean isDone) {

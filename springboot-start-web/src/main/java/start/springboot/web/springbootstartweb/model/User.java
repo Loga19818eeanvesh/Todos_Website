@@ -7,11 +7,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="UserDetails")
+@NamedQuery(query = "Select u from User u where u.userName = :username", name = "find user by username")
 public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

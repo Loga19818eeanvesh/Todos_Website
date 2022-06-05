@@ -16,12 +16,16 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
         auth.inMemoryAuthentication()
             .passwordEncoder(NoOpPasswordEncoder.getInstance())
         		.withUser("usr1").password("pwd1")
-                .roles("USER", "ADMIN");
+                .roles("USER", "ADMIN")
+                .and()
+                .withUser("usr2").password("pwd2")
+                .roles("USER", "ADMIN")
+                ;
     }
 	//login page
 	@Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests().antMatchers("/login", "/h2-console/**").permitAll()
+        http.authorizeRequests().antMatchers("/login", "/h2-console/**","/register").permitAll()
                 .antMatchers("/", "/*todo*/**").access("hasRole('USER')").and()
                 .formLogin();
         

@@ -3,6 +3,7 @@
 <div class="container">
 
 <form:form method="post" modelAttribute="todo">
+	<form:hidden path="id" id="id" />
 	<fieldset class="form-group">	 
 		<form:label path="description" for="desc">Description:</form:label>
 		<form:input path="description" type="text" id="desc"  class="form-control" required="required" />

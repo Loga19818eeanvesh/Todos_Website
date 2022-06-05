@@ -23,9 +23,18 @@ public class TodosRepository {
 		return entityManager.find(Todo.class, id);
 	}
 	
+	public User retriveUser(String username) {
+		TypedQuery<User> query = entityManager.createNamedQuery("find user by username",User.class);
+        query.setParameter("username", username);
+		User user = query.getSingleResult();
+		return user;
+	}
+	
 	public List<Todo> retrieveTodosOfUser(String username) {
-        TypedQuery<User> query = entityManager.createQuery("Select u from User u where u.userName = "+username, User.class);
-        User user = query.getSingleResult();
+        //TypedQuery<User> query = entityManager.createQuery("Select u from User u where u.userName = "+username, User.class);
+		TypedQuery<User> query = entityManager.createNamedQuery("find user by username",User.class);
+        query.setParameter("username", username);
+		User user = query.getSingleResult();
         return user.getTodos();
     }
 	
@@ -39,8 +48,9 @@ public class TodosRepository {
 	}
 	
 	public void AddTodoToUser(String username,Todo todo) {
-		TypedQuery<User> query = entityManager.createQuery("Select u from User u where u.userName = "+username, User.class);
-        User user = query.getSingleResult();
+		TypedQuery<User> query = entityManager.createNamedQuery("find user by username",User.class);
+        query.setParameter("username", username);
+		User user = query.getSingleResult();
 		todo.setUser(user);
 		todo.setDone(false);
 		user.addTodos(todo);
