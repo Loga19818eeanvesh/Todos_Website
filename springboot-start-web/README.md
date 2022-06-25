@@ -1,5 +1,5 @@
 # Todo Website
-LoggedIn Users can add, update and delete their todos.
+LoggedIn Users can add, update and delete their Todos.
 
 ## Tools/Technologies used
 SpringFramework
