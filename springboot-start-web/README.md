@@ -5,7 +5,7 @@ LoggedIn Users can add, update and delete their todos.
 SpringFramework
 
 ## Snapshots
-![Todos Page](https://github.com/Loga19818eeanvesh/Images/blob/main/Screenshot%202022-06-05%20at%2010.54.08%20AM.png)
-![Add-Todo Page](https://github.com/Loga19818eeanvesh/Images/blob/main/Screenshot%202022-06-05%20at%204.17.05%20PM.png)
-![Register Page](https://github.com/Loga19818eeanvesh/Images/blob/main/Screenshot%202022-06-05%20at%2010.43.59%20AM.png)
-![Login Page](https://github.com/Loga19818eeanvesh/Images/blob/main/Screenshot%202022-06-05%20at%2010.44.19%20AM.png)
+![Todos Page](https://github.com/SaiAnveshKanchi/Images/blob/main/IMG_20220625_061641.jpg)
+![Add-Todo Page](https://github.com/SaiAnveshKanchi/Images/blob/main/IMG_20220625_061654.jpg)
+![Register Page](https://github.com/SaiAnveshKanchi/Images/blob/main/IMG_20220625_061704.jpg)
+![Login Page](https://github.com/SaiAnveshKanchi/Images/blob/main/IMG_20220625_061711.jpg)
